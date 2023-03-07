@@ -73,7 +73,6 @@ arrowdownElement.addEventListener("click", function () {
     dotElements[index].classList.add("selected");
     foregroundImageElement.src = backgroundImages[index];
     thumbnailCreatedElements[index].classList.add("selected");
-    console.log(index);
 });
 
 // function arrow-down
@@ -90,7 +89,6 @@ arrowupElement.addEventListener("click", function () {
     dotElements[index].classList.add("selected");
     foregroundImageElement.src = backgroundImages[index];
     thumbnailCreatedElements[index].classList.add("selected");
-    console.log(index);
 });
 
 

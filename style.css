@@ -72,12 +72,14 @@ body {
 #index-dots {
     display: flex;
     justify-content: center;
+    gap: 3px;
     width: 100%;
     bottom: 10px;
     position: absolute;
     bottom: 0;
     right: 0;
     margin-bottom: 1em;
+    z-index: 3;
 }
 
 #index-dots .dot {
@@ -85,10 +87,10 @@ body {
     height: 10px;
     border-radius: 50%;
     border: 1px solid white;
-    background-color: rgbargba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
 }
 
 
 #index-dots .dot.selected {
-    background-color: rgbargba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.1);
 }
