@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 3em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#carousel {
+    position: relative;
+}
+
+#carousel #carouselForeground {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+    object-position: right;
+}
+
+#carouselImageWrapper {
+    display: flex;
+    position: relative;
+} 
+
+#carouselAsideThumbnails {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background-color: black;
+}
+
+#carouselAsideThumbnails .thumbnail {
+    object-fit: cover;
+    width: 200px;
+    opacity: 0.3;
+}
+
+#carouselAsideThumbnails .thumbnail.selected {
+    transform: scale(110%);
+    opacity: 1;
+}
+
+button {
+    border: none;
+    z-index: 3;
+    color: white;
+}
+
+#arrow-up {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    background-color: transparent;
+}
+
+#arrow-down {
+    position: absolute;
+    top: 95%;
+    right: 10%;
+    background-color: transparent;
+}
+
+#index-dots {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1em;
+}
+
+#index-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: rgbargba(255,255,255,0.5);
+}
+
+
+#index-dots .dot.selected {
+    background-color: rgbargba(255,255,255,0.1);
+}

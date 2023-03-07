@@ -31,5 +31,31 @@ const thumbnailsElement = document.getElementById("carouselAsideThumbnails");
 const arrowupElement = document.getElementById("arrow-up");
 const arrowdownElement = document.getElementById("arrow-down");
 const indexDotsElement = document.getElementById("index-dots");
+
 let index = 0;
+
+// creo i puntini
+for(let i = 0; i < backgroundImages.length; i++) {
+    let dot = document.createElement("div");
+    dot.classList.add("dot");
+    indexDotsElement.append(dot);
+}
+
+foregroundImageElement.src = backgroundImages[index];
+
+const dotElements = document.querySelectorAll(".dot");
+dotElements[index].classList.add("selected");
+
+// thumbnails
+for(let i = 0; i < backgroundImages.length; i++) {
+    let newThumbnail = document.createElement("img");
+    thumbnailsElement.append(newThumbnail);
+    newThumbnail.src = backgroundImages[i];
+    newThumbnail.classList.add("thumbnail");
+    newThumbnail.alt = "thumbnail";
+    newThumbnail.style.height = `calc(100% / ${backgroundImages.length})`;
+}
+
+const thumbnailCreatedElements = document.querySelectorAll("#carouselAsideThumbnails .thumbnail");
+thumbnailCreatedElements[index].classList.add("selected");
 
