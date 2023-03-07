@@ -50,17 +50,14 @@ body {
     opacity: 1;
 }
 
-button {
-    border: none;
-    z-index: 3;
-    color: white;
-}
 
 #arrow-up {
     position: absolute;
     top: 0;
     right: 10%;
     background-color: transparent;
+    z-index: 3;
+    color: white;
 }
 
 #arrow-down {
@@ -68,6 +65,8 @@ button {
     top: 95%;
     right: 10%;
     background-color: transparent;
+    z-index: 3;
+    color: white;
 }
 
 #index-dots {

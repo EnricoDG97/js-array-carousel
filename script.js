@@ -59,3 +59,39 @@ for(let i = 0; i < backgroundImages.length; i++) {
 const thumbnailCreatedElements = document.querySelectorAll("#carouselAsideThumbnails .thumbnail");
 thumbnailCreatedElements[index].classList.add("selected");
 
+// function arrow-ap
+arrowdownElement.addEventListener("click", function () {
+    dotElements[index].classList.remove("selected");
+    thumbnailCreatedElements[index].classList.remove("selected");
+
+    if(index == backgroundImages.length - 1) {
+        index == 0;
+    } else {
+        index++;
+    }
+
+    dotElements[index].classList.add("selected");
+    foregroundImageElement.src = backgroundImages[index];
+    thumbnailCreatedElements[index].classList.add("selected");
+    console.log(index);
+});
+
+// function arrow-down
+arrowupElement.addEventListener("click", function () {
+    dotElements[index].classList.remove("selected");
+    thumbnailCreatedElements[index].classList.remove("selected");
+
+    if(index == backgroundImages.length - 1) {
+        index == 0;
+    } else {
+        index--;
+    }
+
+    dotElements[index].classList.add("selected");
+    foregroundImageElement.src = backgroundImages[index];
+    thumbnailCreatedElements[index].classList.add("selected");
+    console.log(index);
+});
+
+
+
